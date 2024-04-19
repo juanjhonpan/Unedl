@@ -30,14 +30,14 @@
 // Show warning if a PHP version below 7.4.0 is used, this has to happen here
 // because base.php will already use 7.4 syntax.
 if (\version_compare(PHP_VERSION, '7.4.0') === -1) {
-	echo 'This version of ownCloud requires at least PHP 7.4.0<br/>';
+	echo 'This version of RH requires at least PHP 7.4.0<br/>';
 	echo 'You are currently running PHP ' . PHP_VERSION . '. Please update your PHP version.';
 	return;
 }
 
-// Show warning if PHP 8.0 or later is used as ownCloud is not compatible with PHP 8.0
+// Show warning if PHP 8.0 or later is used as RH is not compatible with PHP 8.0
 if (\version_compare(PHP_VERSION, '8.0.0') !== -1) {
-	echo 'This version of ownCloud is not compatible with PHP 8.0<br/>';
+	echo 'This version of RH is not compatible with PHP 8.0<br/>';
 	echo 'You are currently running PHP ' . PHP_VERSION . '.';
 	return;
 }
@@ -45,7 +45,7 @@ if (\version_compare(PHP_VERSION, '8.0.0') !== -1) {
 // running oC on Windows is unsupported since 8.1, this has to happen here because
 // is seems that the autoloader on Windows fails later and just throws an exception.
 if (\stripos(PHP_OS, 'WIN') === 0) {
-	echo 'ownCloud Server does not support Microsoft Windows.';
+	echo 'RH Server does not support Microsoft Windows.';
 	return;
 }
 
@@ -78,7 +78,7 @@ try {
 		// with some env issues, it can happen that the logger couldn't log properly,
 		// so print out the exception directly
 		// NOTE: If we've reached this point, something has gone really wrong because
-		// we couldn't even get the logger, so don't rely on ownCloud here.
+		// we couldn't even get the logger, so don't rely on RH here.
 		\header("{$_SERVER['SERVER_PROTOCOL']} 599 Broken");
 		\OC::crashLog($ex);
 		\OC::crashLog($ex2);

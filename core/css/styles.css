@@ -1,7 +1,3 @@
-/* Copyright (c) 2011, Jan-Christoph Borchardt, http://jancborchardt.net
- This file is licensed under the Affero General Public License version 3 or later.
- See the COPYING-README file. */
-
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section { margin:0; padding:0; border:0; outline:0; font-weight:inherit; font-size:100%; font-family:inherit; vertical-align:baseline; cursor:default; }
 html, body { height:100%; }
 article, aside, dialog, figure, footer, header, hgroup, nav, section { display:block; }
@@ -26,9 +22,9 @@ body {
 #body-login {
 	text-align: center;
 	background-image: url('../img/background.jpg');
-	background-position: right bottom;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 100vh;
+	background-position: center;
 }
 
 .two-factor-provider {
@@ -230,7 +226,7 @@ a.two-factor-cancel {
 }
 
 #body-login form label {
-	color: #fff;
+	color: #000 !important;
 	text-align: left;
 	margin-bottom: .5rem;
 	font-weight: bold;
@@ -643,7 +639,7 @@ a.two-factor-cancel {
 }
 
 /* fixes for update page TODO should be fixed some time in a proper way */
-/* this is just for an error while updating the ownCloud instance */
+/* this is just for an error while updating the RH instance */
 #body-login .updateProgress .error {
 	margin-top: 10px;
 	margin-bottom: 10px;
